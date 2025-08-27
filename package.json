@@ -1,0 +1,27 @@
+{
+  "name": "contacts-backend-api",
+  "version": "1.0.0",
+  "description": "express project for contacts backend api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NagendraSR-tech/contacts-express-backend.git"
+  },
+  "author": "\"Nagendra SR\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NagendraSR-tech/contacts-express-backend/issues"
+  },
+  "homepage": "https://github.com/NagendraSR-tech/contacts-express-backend#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
