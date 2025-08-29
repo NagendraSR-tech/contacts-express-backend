@@ -21,7 +21,12 @@ const createContact = asyncHandler(async (req, res) => {
         throw new Error("Please provide all required fields");
         // return res.status(400).json({ message: "Please provide all required fields" });
     }
-    res.status(201).json({ message: "Create a new contact" });
+    const contact = await Contact.create({
+        name,
+        email,
+        phone
+    });
+    res.status(201).json(contact);
 });
 
 //@desc    Get a contact
