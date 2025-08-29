@@ -32,7 +32,7 @@ const createContact = asyncHandler(async (req, res) => {
 //@desc    Get a contact
 //@route   GET /api/contacts/:id
 //@access  Public
-const getContactById = asyncHandler(async (req, res) => {
+const getContact = asyncHandler(async (req, res) => {
     res.status(200).json({ message: `Get a contact with ID: ${req.params.id}` });
 });
 
@@ -53,7 +53,7 @@ const deleteContact = asyncHandler(async (req, res) => {
 module.exports = {
     getContacts,
     createContact,
-    getContactById,
+    getContact,
     updateContact,
     deleteContact
 };
