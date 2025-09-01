@@ -12,14 +12,14 @@ const validateToken = asyncHandler(async (req, res, next) => {
                 throw new Error("Not authorized");
             }
             console.log("Decoded JWT:", decoded);
-            // req.user = decoded;
-            req.user = decoded.userId; // Attach userId to req.user
+            req.user = decoded;// store full decoded object
+            // req.user = decoded.userId; // Attach userId to req.user
             next();
         });
-        if (!token) {
-            res.status(401);
-            throw new Error("Not authorized, no token"); //user not authorized, token is missing in the request
-        }
+    }
+    if (!token) {
+        res.status(401);
+        throw new Error("Not authorized, no token"); //user not authorized, token is missing in the request
     }
 });
 
